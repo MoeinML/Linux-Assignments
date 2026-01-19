@@ -31,6 +31,76 @@ The settings the Azure VM provisioning wizard displays in the Azure portal are g
            ![V7](Images/V7.png)
       3)  <ins> **Networking** </ins>: Every Azure VM uses its network interface to attach to a virtual network's subnet. Therefore, having a virtual network with at least one subnet is a prerequisite when provisioning an Azure VM.
            ![V8](Images/V8.png)
+      4)  <ins> **Management** </ins>: From the Management tab, you can enable several optional settings to enhance your Azure VM's manageability. These settings control support for Microsoft Defender for Cloud and Microsoft Entra authentication. You can also use them to enable schedule-based auto-shutdown, automatic backups, and patch orchestration.
+            ![V9](Images/V9.png)
+      5)  <ins> **Monitoring** </ins>: You use the Monitoring tab to enable monitoring settings. These include automatic alerts that notify you about potential resource utilization issues and boot and operating-system diagnostics.
+             ![V10](Images/V10.png)
+      6)  <ins> **Advanced** </ins>: This tab provides miscellaneous options that allow you to further customize platform and operating system-level settings of the Azure VM that are deploying.
+             ![V11](Images/V11.png)
+      7)  <ins> **Tags** </ins>: You can use this tab to create descriptive labels (tags) that you want to assign to the resource. Tags help organize resources based on your own custom criteria.
+             ![V12](Images/V12.png)
+      8)  <ins> **Review + create** </ins>: After completing the configuration steps in the various pages of the provisioning wizard, you'll reach the final tab, Review + create. At this point, the Azure portal will automatically invoke a validation task, which verifies that the options you've selected are valid. If you've misconfigured a setting or missed a required one, you'll have a chance to go back to the corresponding page to fix your mistake. When you return to the last page, validation will run again.
+         
+>[!IMPORTANT]
+>When you select the SSH Public Key option during the virtual machine creation stage, in the last step (before hitting the final Create button), a window will open asking you to download the Private Key. The file is usually something like Robotics_key.pem.
+
+Below you can see the general settings of the virtual machine.
+![V13](Images/V13.jpg)
+# SSH client (eg. PuTTY) 
+Try logging in after machine creation is successful Connect: Use an SSH client (eg. PuTTY) to connect to your virtual machine. You can download PyTTY safely, from [the website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) of the publisher of the program. We recommend installing the 64-bit x86 MSI package of PuTTY, which also installs other necessary tools. Use the username and password or username and ssh key that you specified during installation. The connection and testing section is not completed, so we need to perform the following steps:
+1)	IP Address: Note down your public IP address on the virtual machine.
+2)	Start the device: click the Start button at the top of the screen to change the device status to Running.
+3)	Connect via SSH (the most important part): Connect to the device using the PuTTY software.
+PuTTY software: Open it, enter the above IP in the Hostname field, and set the port to 22.
+4)	Username and Password: When you created the device, you specified a username and (possibly) password. When the black PuTTY window opens, enter them.
+
+> [!TIP]
+> If you created an SSH key instead of a password, you will need to enter the key file (.ppk) in the PuTTY settings (Auth section). There is one technical point: PuTTY cannot use a .pem file directly, and you need to convert it to its own format, .ppk. To do this, follow these steps:
+
+## Step 1: Convert PEM to PPK (using PuTTYgen)
+-	Open PuTTYgen (it comes installed with PuTTY).
+-	Click the Load button.
+-	In the window that opens, change the file type from (*.ppk) to All Files (.) so that you can see the Robotics_key.pem file and select it.
+-	A message will appear saying that the key was successfully imported. Click OK.
+-	Now click the Save private key button. A warning will appear about not having a password, which you can click Yes.
+-	Save the file with a name of your choice (e.g. Robotics.ppk) in a safe place.
+  ![V14](Images/V14.png)
+## Step 2: Connect to the VM (using PuTTY)
+Now that you have the .ppk file, follow the steps in the tutorial:
+
+-	First, make sure your VM is Running in the Azure panel.
+-	Open PuTTY.
+-	In the Host Name (or IP address) field, enter your machine's IP address: ....
+-	From the left-hand tree menu, navigate to: Connection > SSH > Auth > Credentials
+-	In the Private key file for authentication field, click the Browse button and select the file you created in the previous step (Robotics.ppk).
+-	Go back to the top of the menu and click Session and click the Open button.
+-	A black window will open. If you get a warning, click Accept or Yes.
+  ![V15](Images/V15.jpg)
+ 	
+When the login as: prompt appears, type the username you specified when creating the VM and press Enter.
+  ![V16](Images/V16.png)
+  
+If everything is correct, you will be logged into the Linux terminal.
+  ![V17](Images/V17.jpg)
+
+> [!NOTE]
+> Some tips for managing costs and credit:
+> -	<ins> **Auto-shutdown:**</ins> I see in the image that the auto-shutdown feature is enabled for 10pm. This is very smart so that you don't run out of credit.
+> -	<ins> **Manual shutdown:**</ins> Whenever you are done with Linux, be sure to click the Stop option from within the Azure panel.
+
+
+ 	
+
+
+
+
+
+
+
+
+          
+
+          
 
 
 
