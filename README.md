@@ -87,20 +87,3 @@ If everything is correct, you will be logged into the Linux terminal.
 > Some tips for managing costs and credit:
 > -	<ins> **Auto-shutdown:**</ins> I see in the image that the auto-shutdown feature is enabled for 10pm. This is very smart so that you don't run out of credit.
 > -	<ins> **Manual shutdown:**</ins> Whenever you are done with Linux, be sure to click the Stop option from within the Azure panel.
-
-
- 	
-
-
-
-
-
-
-
-
-          
-
-          
-
-
-
