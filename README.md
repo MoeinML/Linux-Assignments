@@ -70,7 +70,7 @@ Now that you have the .ppk file, follow the steps in the tutorial:
 
 -	First, make sure your VM is Running in the Azure panel.
 -	Open PuTTY.
--	In the Host Name (or IP address) field, enter your machine's IP address: ....
+-	In the Host Name (or IP address) field, enter your machine's IP address: (Your Public IP)
 -	From the left-hand tree menu, navigate to: Connection > SSH > Auth > Credentials
 -	In the Private key file for authentication field, click the Browse button and select the file you created in the previous step (Robotics.ppk).
 -	Go back to the top of the menu and click Session and click the Open button.
