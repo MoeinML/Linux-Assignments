@@ -1,7 +1,7 @@
 # Virtual Machine Creation
 To be able to do Linux exercises, we need a Linux machine. Hence, we use public cloud virtual machines from Microsoft Azure cloud to be doable at any time and place. To create a Linux virtual machine, we must follow the following instructions:
 1. Login to [portal.azure.com](https://portal.azure.com/) using HAMK student id
-2. To receive student credits, request credit from [Azure](https://azure.microsoft.com/en-us/free/students/) to receive $100 in credit by clicking Get _**"Started Free"**_. By clicking on it, we need to log in with our student account and enter a form of our information. This step is necessary not only to receive the credit but also to join the class group (when creating the virtual machine).
+2. To receive student credits, request credit from [Azure](https://azure.microsoft.com/en-us/free/students/) to receive $100 in credit by clicking Get _**"Start Free"**_. By clicking on it, we need to log in with our student account and enter a form of our information. This step is necessary not only to receive the credit but also to join the class group (when creating the virtual machine).
    ![V1](Images/V1.png)
 Once we've been accepted into your Azure for Students subscription, we can create a new virtual machine for ourselves. We'll go to our portal home page, portal.azure.com, and create a new resource, a virtual machine, with the following settings:
 3. By clicking on “Resource groups” and then create, we can connect to the lesson group and assign a name to it. Finally, we click on Review+Create.
