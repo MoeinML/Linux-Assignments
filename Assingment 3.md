@@ -91,11 +91,10 @@ The final task was to create a shared directory at `/opt/projekti` where only **
    ```bash
    sudo chown :projekti /opt/projekti
    sudo chmod 770 /opt/projekti
-4.**Enabling SetGID:** I applied the `g+s` bit to maintain group consistency for future files.
+4. **Enabling SetGID:** I applied the `g+s` bit to maintain group consistency for future files.
    ```bash
    sudo chmod g+s /opt/projekti
- ```
-
+ 
 ### Verification
 As shown in the verification command `ls -ld /opt/projekti`, the directory has the correct group ownership, and the 's' bit is clearly visible, confirming the successful configuration of SetGID.
 
