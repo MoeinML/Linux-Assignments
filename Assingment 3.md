@@ -26,3 +26,22 @@ In this step, I used the `adduser` script to create a new user named tupu. Unlik
 ### Verification
 The terminal output confirms that the user was added to the system, the group was created, and the home directory was successfully initialized at `/home/tupu`.
 ![AS3-1](Images/AS3-1.png)
+
+## Step 2: Creating User "Lupu" using useradd
+In this step, I used the `useradd` command to create the second user, **lupu**. Unlike the high-level `adduser` script used previously, `useradd` is a low-level utility that requires manual configuration via flags. This exercise demonstrates how to manually define a user's home directory and login shell.
+
+### Implementation
+1. **Execute Command:** I used several flags to ensure the user profile matches the requirements:
+   - `-m`: Creates the user's home directory.
+   - `-d /home/lupu`: Specifies the custom path for the home directory.
+   - `-s /bin/bash`: Sets the default login shell to Bash.
+   ```bash
+   sudo useradd -m -d /home/lupu -s /bin/bash lupu
+2. Setting Password: Since `useradd` is a non-interactive command, it does not prompt for a `password`. I set the password manually using the passwd command:
+   ```bash
+   sudo passwd lupu
+### Verification
+I executed the `id lupu` command to verify the successful creation of the account. The output confirms the unique User ID (UID) and Group ID (GID) assigned to lupu.
+
+![AS3-2](Images/AS3-2.png)
+
