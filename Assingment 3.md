@@ -75,4 +75,29 @@ I verified the changes by checking the group memberships of both users. As shown
 
 ![AS3-4](Images/AS3-4.png)
 
+## Step 5: Creating a Collaborative Directory with SetGID
+The final task was to create a shared directory at `/opt/projekti` where only **tupu** and **lupu** have full access. To achieve this, I implemented a group-based permission strategy using the **SetGID (Set Group ID)** bit. This ensures that any new files created within this directory automatically inherit the group ownership of the parent folder, allowing seamless collaboration.
+
+### Implementation
+1. **Directory and Group Creation:** I created the folder and a dedicated group named `projekti`.
+   ```bash
+   sudo mkdir /opt/projekti
+   sudo groupadd projekti
+2. **Membership:** I added both users to the new group.
+   ```bash
+   sudo usermod -aG projekti tupu
+   sudo usermod -aG projekti lupu
+3. **Ownership and Permissions:** I changed the group ownership of the directory and set the permissions to `770` (Full access for Owner and Group, no access for Others).
+   ```bash
+   sudo chown :projekti /opt/projekti
+   sudo chmod 770 /opt/projekti
+4.**Enabling SetGID:** I applied the `g+s` bit to maintain group consistency for future files.
+   ```bash
+   sudo chmod g+s /opt/projekti
+ ```
+
+### Verification
+As shown in the verification command `ls -ld /opt/projekti`, the directory has the correct group ownership, and the 's' bit is clearly visible, confirming the successful configuration of SetGID.
+
+![AS3-5](Images/AS3-5.png)
 
