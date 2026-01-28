@@ -59,4 +59,20 @@ I verified the account creation using the `id hupu` command. As expected for a s
 
 ![AS3-3](Images/AS3-3.png)
 
+## Step 4: Granting Sudo Privileges
+By default, newly created users do not have administrative privileges. To allow **tupu** and **lupu** to execute commands with root authority, I added them to the **sudo** group. This is a secure way to manage administrative access without sharing the root password.
+
+### Implementation
+1. **Adding Users to Sudo Group:** I used the `usermod` command with the `-aG` flags (Append to Group) to ensure their existing group memberships remained intact while adding the new privilege.
+   ```bash
+   sudo usermod -aG sudo tupu
+   sudo usermod -aG sudo lupu
+### Verification
+I verified the changes by checking the group memberships of both users. As shown in the terminal, both users are now part of the `sudo` group.
+   ```bash
+   groups tupu lupu
+```
+
+![AS3-4](Images/AS3-4.png)
+
 
