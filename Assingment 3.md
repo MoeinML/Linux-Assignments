@@ -89,7 +89,7 @@ The final task was to create a shared directory at `/opt/projekti` where only **
    sudo usermod -aG projekti lupu
 3. **Ownership and Permissions:** I changed the group ownership of the directory and set the permissions to `770` (Full access for Owner and Group, no access for Others).
    ```bash
-   sudo chown :projekti /opt/projekti
+   sudo chown root:projekti /opt/projekti
    sudo chmod 770 /opt/projekti
 4. **Enabling SetGID:** I applied the `g+s` bit to maintain group consistency for future files.
    ```bash
@@ -98,5 +98,5 @@ The final task was to create a shared directory at `/opt/projekti` where only **
 ### Verification
 As shown in the verification command `ls -ld /opt/projekti`, the directory has the correct group ownership, and the 's' bit is clearly visible, confirming the successful configuration of SetGID.
 
-![AS3-5](Images/AS3-5.png)
+![AS3-6](Images/AS3-6.png)
 
