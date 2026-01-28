@@ -45,5 +45,18 @@ I executed the `id lupu` command to verify that the user lupu was successfully c
 
 ![AS3-2](Images/AS3-2.png)
 
+## Step 3: Creating System User "Hupu"
+In this step, I created a **system user** named **hupu**. System accounts are different from regular user accounts; they are typically used to run services or background processes rather than for human interaction. To enhance security, these users are usually denied terminal access.
+
+### Implementation
+1. **Execute Command:** I used the `useradd` command with specific flags to define the system nature of this account:
+   - `--system`: Tells Linux to create a system account (usually with a lower UID).
+   - `--shell /bin/false`: Sets a non-existent shell. If anyone tries to log in as **hupu**, the system will immediately reject the connection.
+   ```bash
+   sudo useradd --system --shell /bin/false hupu
+### Verification
+I verified the account creation using the `id hupu` command. As expected for a system user, the assigned UID is lower than those of the regular users (Tupu and Lupu).
+
+![AS3-3](Images/AS3-3.png)
 
 
