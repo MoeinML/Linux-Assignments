@@ -37,11 +37,13 @@ In this step, I used the `useradd` command to create the second user, **lupu**. 
    - `-s /bin/bash`: Sets the default login shell to Bash.
    ```bash
    sudo useradd -m -d /home/lupu -s /bin/bash lupu
-2. Setting Password: Since `useradd` is a non-interactive command, it does not prompt for a `password`. I set the password manually using the passwd command:
+2. Setting Password: Since `useradd` does not prompt for a password automatically, I set it manually using the `passwd` command:
    ```bash
    sudo passwd lupu
 ### Verification
-I executed the `id lupu` command to verify the successful creation of the account. The output confirms the unique User ID (UID) and Group ID (GID) assigned to lupu.
+I executed the `id lupu` command to verify that the user lupu was successfully created with the correct UID and primary group.
 
 ![AS3-2](Images/AS3-2.png)
+
+
 
