@@ -100,3 +100,5 @@ As shown in the verification command `ls -ld /opt/projekti`, the directory has t
 
 ![AS3-6](Images/AS3-6.png)
 
+## Conclusion
+This assignment successfully demonstrated the core principles of Linux user management and file system security. By utilizing tools like `adduser`, `useradd`, and advanced permission bits like SetGID, I have built a secure and collaborative environment ready for administrative tasks.
