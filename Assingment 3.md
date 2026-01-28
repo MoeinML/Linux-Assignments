@@ -23,8 +23,10 @@ In this step, I used the `adduser` script to create a new user named tupu. Unlik
 
 > [!NOTE]
 > **Note on Passwords:** During this process, I first authenticated myself using my sudo password. Then, I set a new, unique password for the user tupu as prompted by the script.
+
 ### Verification
 The terminal output confirms that the user was added to the system, the group was created, and the home directory was successfully initialized at `/home/tupu`.
+
 ![AS3-1](Images/AS3-1.png)
 
 ## Step 2: Creating User "Lupu" using useradd
@@ -40,6 +42,7 @@ In this step, I used the `useradd` command to create the second user, **lupu**. 
 2. Setting Password: Since `useradd` does not prompt for a password automatically, I set it manually using the `passwd` command:
    ```bash
    sudo passwd lupu
+
 ### Verification
 I executed the `id lupu` command to verify that the user lupu was successfully created with the correct UID and primary group.
 
@@ -54,6 +57,7 @@ In this step, I created a **system user** named **hupu**. System accounts are di
    - `--shell /bin/false`: Sets a non-existent shell. If anyone tries to log in as **hupu**, the system will immediately reject the connection.
    ```bash
    sudo useradd --system --shell /bin/false hupu
+
 ### Verification
 I verified the account creation using the `id hupu` command. As expected for a system user, the assigned UID is lower than those of the regular users (Tupu and Lupu).
 
@@ -67,6 +71,7 @@ By default, newly created users do not have administrative privileges. To allow 
    ```bash
    sudo usermod -aG sudo tupu
    sudo usermod -aG sudo lupu
+
 ### Verification
 I verified the changes by checking the group memberships of both users. As shown in the terminal, both users are now part of the `sudo` group.
    ```bash
