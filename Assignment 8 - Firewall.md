@@ -48,4 +48,6 @@ To allow the server to function as a web server, I need to open the standard por
 
 **Why:** Without these rules, the firewall would block any attempt to visit a website or web service hosted on this server. Opening only these specific ports follows the security principle of "least privilege" (only opening what is strictly necessary).
 
+![AS8-3.jpg](Images/AS8-3.jpg)
+
 
