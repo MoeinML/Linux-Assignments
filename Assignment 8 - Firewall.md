@@ -8,7 +8,7 @@ The goal of this exercise is to protect our server by:
 * Blocking unauthorized access.
 * Preventing common network attacks like SYN flooding.
 
-## Phase 2: Implementation Roadmap
+## Implementation Roadmap
 
 To configure the firewall correctly without losing access to the server, I will follow these steps:
 
