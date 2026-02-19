@@ -61,6 +61,23 @@ In this step, I activate the logging system as required by the assignment and tu
 
 ![AS8-4.jpg](Images/AS8-4.jpg)
 
+## Step 5: Advanced Security and Attack Prevention
+The final step focuses on protecting the server from common network attacks, specifically **SYN Flood** and **Brute Force**.
+
+### 1. Preventing SYN Flood Attacks
+A SYN flood is a type of Denial-of-Service (DoS) attack where an attacker sends a succession of SYN requests to a target's system in an attempt to consume enough server resources to make the system unresponsive to legitimate traffic.
+
+* **How I prevented it:** Modern Linux kernels (like the one used in Ubuntu 24.04) include `SYN cookies` by default to mitigate this. Additionally, by using the `limit` rule on SSH and having UFW active, the server is better protected against connection-based attacks.
+
+### 2. Preventing Brute Force with Fail2Ban
+While UFW blocks ports, **Fail2Ban** monitors the logs to find repeated failed login attempts.
+
+* `sudo systemctl enable fail2ban`: Ensures the service starts automatically on boot.
+* `sudo systemctl start fail2ban`: Starts the service immediately.
+
+**Why:** Fail2Ban adds an extra layer of security. If a bot tries to guess my password, Fail2Ban will see the failed attempts in the logs and tell UFW to block that specific IP address entirely.
+
+![AS8-5.jpg](Images/AS8-5.jpg)
 
 
 
