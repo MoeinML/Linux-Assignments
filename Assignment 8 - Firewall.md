@@ -25,3 +25,10 @@ To build a secure firewall, I first need to install the necessary tools: **UFW**
 * `sudo apt install ufw fail2ban -y`: Installs the Uncomplicated Firewall (UFW) and the Fail2Ban intrusion prevention service.
 
 **Why:** UFW is used for defining network rules, and Fail2Ban is used to automatically block malicious IP addresses that show suspicious behavior (like too many failed login attempts).
+
+### Verification of Installation
+After installation, I verified that Fail2Ban is active and running to ensure the intrusion prevention system is ready.
+
+* `sudo systemctl status fail2ban`: This command confirms the service status.
+
+![Installation Status](./AS8-1.jpg)
