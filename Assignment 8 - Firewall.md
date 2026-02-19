@@ -34,7 +34,7 @@ After installation, I verified that Fail2Ban is active and running to ensure the
 ![Installation Status](Images/AS8-1.jpg)
 
 ## Step 2: Configuring SSH Access
-* `sudo ufw limit ssh`: This rule allows SSH access (Port 22) but adds protection by limiting the number of connections from a single IP. 
+* `sudo ufw limit ssh`: This rule allows SSH access (Port 22) but adds protection by limiting the number of connections from a single IP. By using `limit` instead of `allow`, I am preventing Brute Force attacks on the SSH port.
 
 **Why:** If an IP tries to connect too many times in a short period (like a Brute Force attack), UFW will block it. This ensures I don't get locked out and protects the server from password-guessing bots.
 
