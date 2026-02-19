@@ -40,4 +40,12 @@ After installation, I verified that Fail2Ban is active and running to ensure the
 
 ![AS8-2.jpg](Images/AS8-2.jpg)
 
+## Step 3: Allowing Web Traffic
+[cite_start]To allow the server to function as a web server, I need to open the standard ports for web traffic. [cite: 247, 248]
+
+* [cite_start]`sudo ufw allow http`: This opens port 80, which is the default port for unencrypted web traffic. [cite: 248, 249]
+* [cite_start]`sudo ufw allow https`: This opens port 443, which is the default port for secure (encrypted) web traffic. [cite: 248, 249]
+
+**Why:** Without these rules, the firewall would block any attempt to visit a website or web service hosted on this server. [cite_start]Opening only these specific ports follows the security principle of "least privilege" (only opening what is strictly necessary). [cite: 246, 247]
+
 
