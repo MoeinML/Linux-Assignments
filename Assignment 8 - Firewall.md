@@ -50,4 +50,17 @@ To allow the server to function as a web server, I need to open the standard por
 
 ![AS8-3.jpg](Images/AS8-3.jpg)
 
+## Step 4: Enabling Logging and Activating the Firewall
+In this step, I activate the logging system as required by the assignment and turn on the firewall.
+
+* `sudo ufw logging on`: This command enables the logging of network traffic.
+* `sudo ufw enable`: This command activates the UFW firewall with all the rules defined in the previous steps.
+* * `sudo ufw status verbose`: I used this command to verify that the firewall is active and that the logging is turned on.
+
+**Why:** Enabling logs is crucial for monitoring and troubleshooting. It allows me to see which connections were allowed and which were blocked by the firewall. Activating the firewall ensures the server is now protected by the "Default Deny" policy, where only the traffic we explicitly allowed (SSH, HTTP, HTTPS) can pass through.
+
+![AS8-4.jpg](Images/AS8-4.jpg)
+
+
+
 
