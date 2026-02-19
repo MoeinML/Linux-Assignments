@@ -31,4 +31,4 @@ After installation, I verified that Fail2Ban is active and running to ensure the
 
 * `sudo systemctl status fail2ban`: This command confirms the service status.
 
-![Installation Status](./AS8-1.jpg)
+![Installation Status](Images/AS8-1.jpg)
