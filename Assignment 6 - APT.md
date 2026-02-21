@@ -89,7 +89,7 @@ I chose **`tuxpaint`** from the list.
 
 ---
 
-### 2.2 Viewing Package Details
+### 6. Viewing Package Details
 I checked the details of `tuxpaint` to find its dependencies.
 
 **Command:**
@@ -102,7 +102,7 @@ It requires several libraries, including `tuxpaint-data`, `libc6`, and etc.
 
 ---
 
-### 2.3 Installing the Package
+### 7. Installing the Package
 I installed the package using the following command:
 
 **Command:**
@@ -112,7 +112,7 @@ I installed the package using the following command:
 
 ---
 
-### 2.4 Verifying the Installation
+### 8. Verifying the Installation
 To verify the installation and check the version:
 
 **Command:**
