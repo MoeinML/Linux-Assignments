@@ -82,6 +82,8 @@ I searched for an image editor using the following command:
 **Command:**
 `apt search image editor`
 
+![AS6-5.jpg](Images/AS6-5.jpg)
+
 **Selection:**
 I chose **`gpaint`** (GNU Paint) from the list as a lightweight image editor.
 
