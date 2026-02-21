@@ -38,6 +38,7 @@ I ran the following command to see the installed APT version:
 
 ### 1.2 Updating Package List
 I updated the catalog of available software from the repositories.
+
 **Command:**
 `sudo apt update`
 
@@ -48,6 +49,7 @@ This step is crucial because it fetches the latest information about software ve
 
 ### 1.3 Upgrading Packages
 I installed the available updates discovered in the previous step.
+
 **Command:**
 `sudo apt upgrade -y`
 
@@ -59,6 +61,7 @@ I installed the available updates discovered in the previous step.
 
 ### 1.4 Viewing Pending Updates
 To see which specific packages are ready for an upgrade, I used:
+
 **Command:**
 `apt list --upgradable`
 
