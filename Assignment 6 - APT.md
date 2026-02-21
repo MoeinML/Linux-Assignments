@@ -32,6 +32,7 @@ I ran the following command to see the installed APT version:
 `apt --version`
 
 **Output:**
+
 ![AS6-1.jpg](Images/AS6-1.jpg)
 
 ---
