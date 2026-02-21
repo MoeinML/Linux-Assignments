@@ -130,6 +130,8 @@ I removed the package using the following command:
 **Command:**
 `sudo apt remove tuxpaint -y`
 
+![AS6-9.jpg](Images/AS6-9.jpg)
+
 **Is the package fully removed?**
 The binary files are removed, but the configuration files remain on the system.
 
@@ -140,6 +142,8 @@ To completely remove the package and its settings, I used:
 
 **Command:**
 `sudo apt purge tuxpaint -y`
+
+![AS6-10.jpg](Images/AS6-10.jpg)
 
 **Difference between Remove and Purge:**
 - **Remove:** Only deletes the package binaries.
@@ -153,6 +157,8 @@ I removed unused dependencies that were no longer needed by any software:
 **Command:**
 `sudo apt autoremove -y`
 
+![AS6-11.jpg](Images/AS6-11.jpg)
+
 **Why is this step important?**
 It helps to keep the system clean and saves disk space by removing libraries that are no longer in use.
 
@@ -163,6 +169,8 @@ Finally, I cleared the downloaded package archives from the local cache:
 
 **Command:**
 `sudo apt clean`
+
+![AS6-12.jpg](Images/AS6-12.jpg)
 
 **What does this command do?**
 It deletes the `.deb` files stored in `/var/cache/apt/archives/`, freeing up additional disk space.
