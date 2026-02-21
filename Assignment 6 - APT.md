@@ -220,3 +220,27 @@ I attempted to install a non-existent package to observe the error handling.
 2. Run `sudo apt update` to refresh package lists.
 3. Use `apt search <keyword>` to find the correct name of the package.
 4. Ensure the necessary repository (like Universe or Multiverse) is enabled.
+
+## Bonus Challenge: Holding and Unholding Packages
+
+### 16. Holding a Package
+I used the `apt-mark` command to prevent a specific package from being updated during a system upgrade.
+**Command:**
+`sudo apt-mark hold tuxpaint`
+
+![AS6-16.jpg](Images/AS6-16.jpg)
+
+**Why would you want to hold a package?**
+You would hold a package to maintain a specific version of software that is known to be stable or compatible with your current projects. This prevents an automatic `apt upgrade` from installing a newer version that might cause compatibility issues.
+
+---
+
+### 17. Unholding a Package
+To allow the package to be updated again in the future, I used the unhold command:
+**Command:**
+`sudo apt-mark unhold tuxpaint`
+
+![AS6-17.jpg](Images/AS6-17.jpg)
+
+**Result:**
+The package is now back to its normal state and will be included in future system upgrades.
