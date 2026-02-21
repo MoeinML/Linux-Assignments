@@ -194,6 +194,7 @@ I enabled the "Universe" repository to access more community-maintained software
 
 **Command:**
 `sudo add-apt-repository universe`
+
 `sudo apt update`
 
 ![AS6-14.jpg](Images/AS6--14.jpg)
