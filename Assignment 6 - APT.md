@@ -71,6 +71,7 @@ To see which specific packages are ready for an upgrade, I used:
 `apt list --upgradable`
 
 **Output:**
-> (اگر لیستی نمایش داده شد اینجا کپی کن، در غیر این صورت بنویس: All packages are up to date)
->
-> 
+
+![AS6-4.jpg](Images/AS6-4.jpg)
+
+
