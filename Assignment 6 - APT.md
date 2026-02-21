@@ -95,6 +95,8 @@ I checked the details of `tuxpaint` to find its dependencies.
 **Command:**
 `apt show tuxpaint`
 
+![AS6-6.jpg](Images/AS6-6.jpg)
+
 **Dependencies:**
 It requires several libraries, including `tuxpaint-data`, `libc6`, and `libsdl1.2debian`.
 
