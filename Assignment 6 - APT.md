@@ -186,8 +186,7 @@ I viewed the list of software sources configured on my system.
 ![AS6-13.jpg](Images/AS6-13.jpg)
 
 **What do you notice in this file?**
-The file contains URLs to Ubuntu's official servers and different components like `main` (officially supported) and `restricted` (proprietary drivers).
-
+I noticed that the file is mostly empty and contains a notification stating that Ubuntu sources have moved to `/etc/apt/sources.list.d/ubuntu.sources`. This confirms that my system uses the new **deb822** format for enhanced security and clarity.
 ---
 
 ### 14. Adding the Universe Repository
@@ -196,6 +195,8 @@ I enabled the "Universe" repository to access more community-maintained software
 **Command:**
 `sudo add-apt-repository universe`
 `sudo apt update`
+
+![AS6-14.jpg](Images/AS6--14.jpg)
 
 **What types of packages are found in the universe repository?**
 The **Universe** repository contains thousands of community-maintained, free, and open-source software that are not officially supported by the Ubuntu core team.
