@@ -121,3 +121,48 @@ To verify the installation and check the version:
 **Installed Version:**
 
 ![AS6-8.jpg](Images/AS6-8.jpg)
+
+## Part 3: Removing & Cleaning Packages
+
+### 9. Uninstalling the Package
+I removed the package using the following command:
+
+**Command:**
+`sudo apt remove tuxpaint -y`
+
+**Is the package fully removed?**
+The binary files are removed, but the configuration files remain on the system.
+
+---
+
+### 10. Purging Configuration Files
+To completely remove the package and its settings, I used:
+
+**Command:**
+`sudo apt purge tuxpaint -y`
+
+**Difference between Remove and Purge:**
+- **Remove:** Only deletes the package binaries.
+- **Purge:** Deletes the package binaries PLUS all configuration files.
+
+---
+
+### 11. Clearing Unnecessary Dependencies
+I removed unused dependencies that were no longer needed by any software:
+
+**Command:**
+`sudo apt autoremove -y`
+
+**Why is this step important?**
+It helps to keep the system clean and saves disk space by removing libraries that are no longer in use.
+
+---
+
+### 12. Cleaning the Package Cache
+Finally, I cleared the downloaded package archives from the local cache:
+
+**Command:**
+`sudo apt clean`
+
+**What does this command do?**
+It deletes the `.deb` files stored in `/var/cache/apt/archives/`, freeing up additional disk space.
