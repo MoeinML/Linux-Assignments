@@ -199,7 +199,7 @@ I enabled the "Universe" repository to access more community-maintained software
 ![AS6-14.jpg](Images/AS6--14.jpg)
 
 **What types of packages are found in the universe repository?**
-The **Universe** repository contains thousands of community-maintained, free, and open-source software that are not officially supported by the Ubuntu core team.
+The **Universe** repository contains free and open-source software maintained by the community. These are not officially supported by the Ubuntu core team.
 
 ---
 
@@ -211,6 +211,8 @@ I attempted to install a non-existent package to observe the error handling.
 
 **What error message do you get?**
 `E: Unable to locate package fakepackage`.
+
+![AS6-15.jpg](Images/AS6-15.jpg)
 
 **How would you troubleshoot this issue?**
 1. Check for typos in the package name.
