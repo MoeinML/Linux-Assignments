@@ -98,7 +98,7 @@ I checked the details of `tuxpaint` to find its dependencies.
 ![AS6-6.jpg](Images/AS6-6.jpg)
 
 **Dependencies:**
-It requires several libraries, including `tuxpaint-data`, `libc6`, and `libsdl1.2debian`.
+It requires several libraries, including `tuxpaint-data`, `libc6`, and etc.
 
 ---
 
@@ -107,6 +107,8 @@ I installed the package using the following command:
 
 **Command:**
 `sudo apt install tuxpaint -y`
+
+![AS6-7.jpg](Images/AS6-7.jpg)
 
 ---
 
@@ -117,4 +119,5 @@ To verify the installation and check the version:
 `apt list --installed | grep tuxpaint`
 
 **Installed Version:**
-> (خروجی ترمینال را اینجا قرار بده)
+
+![AS6-8.jpg](Images/AS6-8.jpg)
