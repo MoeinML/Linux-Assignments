@@ -187,6 +187,7 @@ I viewed the list of software sources configured on my system.
 
 **What do you notice in this file?**
 I noticed that the file is mostly empty and contains a notification stating that Ubuntu sources have moved to `/etc/apt/sources.list.d/ubuntu.sources`. This confirms that my system uses the new **deb822** format for enhanced security and clarity.
+
 ---
 
 ### 14. Adding the Universe Repository
