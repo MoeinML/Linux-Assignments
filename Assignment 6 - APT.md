@@ -83,18 +83,18 @@ I searched for an image editor using the following command:
 `apt search image editor`
 
 **Selection:**
-I chose the package **`imagemagick`** from the list.
+I chose **`gpaint`** (GNU Paint) from the list as a lightweight image editor.
 
 ---
 
 ### 6. Viewing Package Details
-Before installing, I checked the metadata and dependencies of the package.
+I checked the details of `gpaint` to understand its dependencies.
 
 **Command:**
-`apt show imagemagick`
+`apt show gpaint`
 
 **Dependencies:**
-The package requires several dependencies such as `imagemagick-6.q16`, `libmagickcore-6.q16-6`, and `libc6`.
+Based on the output, it requires dependencies like `libc6`, `libgtk2.0-0`, and `libglib2.0-0`.
 
 ---
 
@@ -102,7 +102,7 @@ The package requires several dependencies such as `imagemagick-6.q16`, `libmagic
 I installed the selected package using the following command:
 
 **Command:**
-`sudo apt install imagemagick -y`
+`sudo apt install gpaint -y`
 
 ---
 
@@ -110,7 +110,7 @@ I installed the selected package using the following command:
 To confirm the package was successfully installed and to check its version, I ran:
 
 **Command:**
-`apt list --installed | grep imagemagick`
+`apt list --installed | grep gpaint`
 
 **Installed Version:**
 > (اینجا ورژن خروجی ترمینال را بنویس، مثلا: 8:6.9.11.60+dfsg-1.3ubuntu0.22.04.3)
