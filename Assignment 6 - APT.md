@@ -174,3 +174,45 @@ Finally, I cleared the downloaded package archives from the local cache:
 
 **What does this command do?**
 It deletes the `.deb` files stored in `/var/cache/apt/archives/`, freeing up additional disk space.
+
+## Part 4: Managing Repositories & Troubleshooting
+
+### 13. Listing APT Repositories
+I viewed the list of software sources configured on my system.
+
+**Command:**
+`cat /etc/apt/sources.list`
+
+![AS6-13.jpg](Images/AS6-13.jpg)
+
+**What do you notice in this file?**
+The file contains URLs to Ubuntu's official servers and different components like `main` (officially supported) and `restricted` (proprietary drivers).
+
+---
+
+### 14. Adding the Universe Repository
+I enabled the "Universe" repository to access more community-maintained software.
+
+**Command:**
+`sudo add-apt-repository universe`
+`sudo apt update`
+
+**What types of packages are found in the universe repository?**
+The **Universe** repository contains thousands of community-maintained, free, and open-source software that are not officially supported by the Ubuntu core team.
+
+---
+
+### 15. Simulating Installation Failure
+I attempted to install a non-existent package to observe the error handling.
+
+**Command:**
+`sudo apt install fakepackage`
+
+**What error message do you get?**
+`E: Unable to locate package fakepackage`.
+
+**How would you troubleshoot this issue?**
+1. Check for typos in the package name.
+2. Run `sudo apt update` to refresh package lists.
+3. Use `apt search <keyword>` to find the correct name of the package.
+4. Ensure the necessary repository (like Universe or Multiverse) is enabled.
