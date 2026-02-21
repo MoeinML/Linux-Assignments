@@ -85,34 +85,34 @@ I searched for an image editor using the following command:
 ![AS6-5.jpg](Images/AS6-5.jpg)
 
 **Selection:**
-I chose **`gpaint`** (GNU Paint) from the list as a lightweight image editor.
+I chose **`tuxpaint`** from the list.
 
 ---
 
-### 6. Viewing Package Details
-I checked the details of `gpaint` to understand its dependencies.
+### 2.2 Viewing Package Details
+I checked the details of `tuxpaint` to find its dependencies.
 
 **Command:**
-`apt show gpaint`
+`apt show tuxpaint`
 
 **Dependencies:**
-Based on the output, it requires dependencies like `libc6`, `libgtk2.0-0`, and `libglib2.0-0`.
+It requires several libraries, including `tuxpaint-data`, `libc6`, and `libsdl1.2debian`.
 
 ---
 
-### 7. Installing the Package
-I installed the selected package using the following command:
+### 2.3 Installing the Package
+I installed the package using the following command:
 
 **Command:**
-`sudo apt install gpaint -y`
+`sudo apt install tuxpaint -y`
 
 ---
 
-### 8. Verifying the Installation
-To confirm the package was successfully installed and to check its version, I ran:
+### 2.4 Verifying the Installation
+To verify the installation and check the version:
 
 **Command:**
-`apt list --installed | grep gpaint`
+`apt list --installed | grep tuxpaint`
 
 **Installed Version:**
-> (اینجا ورژن خروجی ترمینال را بنویس، مثلا: 8:6.9.11.60+dfsg-1.3ubuntu0.22.04.3)
+> (خروجی ترمینال را اینجا قرار بده)
