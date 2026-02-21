@@ -27,6 +27,7 @@ This report documents the practical steps taken to manage software packages on U
 
 ### 1.1 Checking APT Version
 I ran the following command to see the installed APT version:
+
 **Command:**
 `apt --version`
 
