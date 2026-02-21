@@ -25,7 +25,7 @@ This report documents the practical steps taken to manage software packages on U
 
 ## Part 1: Understanding APT & System Updates
 
-### 1.1 Checking APT Version
+### 1. Checking APT Version
 I ran the following command to see the installed APT version:
 
 **Command:**
@@ -37,7 +37,7 @@ I ran the following command to see the installed APT version:
 
 ---
 
-### 1.2 Updating Package List
+### 2. Updating Package List
 I updated the catalog of available software from the repositories.
 
 **Command:**
@@ -50,7 +50,7 @@ This step is crucial because it fetches the latest information about software ve
 
 ---
 
-### 1.3 Upgrading Packages
+### 3. Upgrading Packages
 I installed the available updates discovered in the previous step.
 
 **Command:**
@@ -64,7 +64,7 @@ I installed the available updates discovered in the previous step.
 
 ---
 
-### 1.4 Viewing Pending Updates
+### 4. Viewing Pending Updates
 To see which specific packages are ready for an upgrade, I used:
 
 **Command:**
@@ -74,4 +74,43 @@ To see which specific packages are ready for an upgrade, I used:
 
 ![AS6-4.jpg](Images/AS6-4.jpg)
 
+## Part 2: Installing & Managing Packages
 
+### 5. Searching for a Package
+I searched for an image editor using the following command:
+
+**Command:**
+`apt search image editor`
+
+**Selection:**
+I chose the package **`imagemagick`** from the list.
+
+---
+
+### 6. Viewing Package Details
+Before installing, I checked the metadata and dependencies of the package.
+
+**Command:**
+`apt show imagemagick`
+
+**Dependencies:**
+The package requires several dependencies such as `imagemagick-6.q16`, `libmagickcore-6.q16-6`, and `libc6`.
+
+---
+
+### 7. Installing the Package
+I installed the selected package using the following command:
+
+**Command:**
+`sudo apt install imagemagick -y`
+
+---
+
+### 8. Verifying the Installation
+To confirm the package was successfully installed and to check its version, I ran:
+
+**Command:**
+`apt list --installed | grep imagemagick`
+
+**Installed Version:**
+> (اینجا ورژن خروجی ترمینال را بنویس، مثلا: 8:6.9.11.60+dfsg-1.3ubuntu0.22.04.3)
