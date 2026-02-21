@@ -43,6 +43,8 @@ I updated the catalog of available software from the repositories.
 **Command:**
 `sudo apt update`
 
+![AS6-2.jpg](Images/AS6-2.jpg)
+
 **Why is this important?**
 This step is crucial because it fetches the latest information about software versions and security patches from the servers. Without it, the system won't know if a newer version is available.
 
@@ -54,7 +56,6 @@ I installed the available updates discovered in the previous step.
 **Command:**
 `sudo apt upgrade -y`
 
-![AS6-2.jpg](Images/AS6-2.jpg)
 
 **Difference between Update and Upgrade:**
 - **Update:** Refreshes the local database of available packages (checks the catalog).
