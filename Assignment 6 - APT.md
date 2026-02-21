@@ -54,6 +54,8 @@ I installed the available updates discovered in the previous step.
 **Command:**
 `sudo apt upgrade -y`
 
+![AS6-2.jpg](Images/AS6-2.jpg)
+
 **Difference between Update and Upgrade:**
 - **Update:** Refreshes the local database of available packages (checks the catalog).
 - **Upgrade:** Actually downloads and installs the newer versions of the software (buys the books).
